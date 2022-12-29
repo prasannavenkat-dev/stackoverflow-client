@@ -20,7 +20,7 @@ noOfAnswers:0,
 questionTitle:"",
 questionBody:"",
 questionTags:[],
-userPosted:"prasanna", //constant
+userPosted:user?.data?.name, //constant
 askedOn:"",
 answers:[]
 });

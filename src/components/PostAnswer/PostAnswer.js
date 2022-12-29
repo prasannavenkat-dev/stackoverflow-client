@@ -5,7 +5,6 @@ import votedown from "../../assets/votedown.svg"
 import AnswerCard from '../AnswerCard/AnswerCard'
 import axios from "axios"
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
-import { CircularProgress } from '@mui/material'
 const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
 
     const [selectedQuestion, setSelectedQuestion] = useState();
@@ -15,13 +14,6 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
     let navigate = useNavigate();
 
     useEffect(() => {
-        //  setSelectedQuestion(()=> {
-        //     let question = questionList.filter( ({_id}) => {
-        //        return _id ==id
-        //     })[0]
-
-        //     return question
-        //  })
 
         async function getQuestion(id) {
             let { data } = await axios.post("https://stackoverflow-server-16ku.onrender.com/getQuestion", { _id: id })
@@ -229,7 +221,7 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
                         </div>
                     </div> :
                     <div className='default'>
-                    <CircularProgress sx={{color:"#0000"}} />
+                    
                     </div>
             }
         </>
