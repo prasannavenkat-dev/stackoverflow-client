@@ -5,6 +5,7 @@ import votedown from "../../assets/votedown.svg"
 import AnswerCard from '../AnswerCard/AnswerCard'
 import axios from "axios"
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { CircularProgress } from '@mui/material'
 const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
 
     const [selectedQuestion, setSelectedQuestion] = useState();
@@ -227,7 +228,9 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
                             </div>
                         </div>
                     </div> :
-                    <div className='default'></div>
+                    <div className='default'>
+                    <CircularProgress sx={{color:"#0000"}} />
+                    </div>
             }
         </>
     )

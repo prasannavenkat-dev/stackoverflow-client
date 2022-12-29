@@ -5,7 +5,8 @@ export default function authReducer(state, action) {
             alert(action?.data?.message)
             return { ...state, ...action?.data.data }
         case "AUTH-FAIL":
-            alert(action?.error?.response?.data?.message || "Request Failed")
+            console.log(action?.error?.response?.data)
+            alert(action?.error?.response?.data || "Request Failed")
             return { ...state }
 
         default:
