@@ -35,6 +35,11 @@ function logOut(){
   navigate("/")
 }
 
+function handlePage(page){
+  handleClose();
+  navigate(page);
+
+}
 
 
   return (
@@ -63,10 +68,10 @@ function logOut(){
               'aria-labelledby': 'basic-button',
             }}
           >
-            <MenuItem onClick={handleClose}>Home</MenuItem>
-            <MenuItem onClick={handleClose}>Questions</MenuItem>
-            <MenuItem onClick={handleClose}>Tags</MenuItem>
-            <MenuItem onClick={handleClose}>Users</MenuItem>
+            <MenuItem onClick={()=>handlePage("/")}>Home</MenuItem>
+            <MenuItem onClick={()=>handlePage("/questions")}>Questions</MenuItem>
+            <MenuItem onClick={()=>handlePage("/tags")}>Tags</MenuItem>
+            <MenuItem onClick={()=>handlePage("/users")}>Users</MenuItem>
 
           </Menu>
 
