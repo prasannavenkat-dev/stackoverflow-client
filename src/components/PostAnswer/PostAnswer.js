@@ -46,6 +46,8 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
             alert("Answer Is Required!")
             return;
         }
+
+        
         let answeredOn = getCurrentDateAndTime();
         let answers = [...selectedQuestion.answers];
         let answeredBy = user?.data?.name;
@@ -80,6 +82,12 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
 
         if (type == "upVote" && isVoted.upVoted || type == "downVote" && isVoted.downVoted) {
             alert('Already Voted');
+            return
+        }
+
+
+        if(user?.data?.userId == selectedQuestion.userId){
+            alert('Cannot vote to your posts');
             return
         }
 
