@@ -13,7 +13,5 @@ export const postQuestion = (question) => async (dispatch) => {
     } catch (error) {
 
         dispatch({ type: "POST-QUESTION-ERROR", error })
-
-        console.log(error,"asdsaljhdkasd")
     }
 }

@@ -23,8 +23,6 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
         //  })
 
         async function getQuestion(id) {
-            console.log(id, 'id')
-
             let { data } = await axios.post("https://stackoverflow-server-16ku.onrender.com/getQuestion", { _id: id })
             let question = data.data
             setIsVoted(()=>{
@@ -35,8 +33,6 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
                 
             }
                 );
-
-                console.log(question.downVotes.includes(user?.data?.userId))
 
             setSelectedQuestion({ ...question })
             
@@ -72,7 +68,6 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
         //     return {...prev,answers:[...prev.answers,...answers]}
         // })
 
-        console.log({ ...selectedQuestion, answers })
     }
 
     function answerBodyHandler(event) {

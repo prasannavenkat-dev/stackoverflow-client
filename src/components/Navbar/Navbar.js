@@ -26,7 +26,6 @@ const Navbar = ({user,setUser}) => {
   let navigate = useNavigate();
 useEffect(() => {
 setUser(JSON.parse(window.sessionStorage.getItem("user")))
-console.log(JSON.parse(window.sessionStorage.getItem("user")))
 }, [])
 
 

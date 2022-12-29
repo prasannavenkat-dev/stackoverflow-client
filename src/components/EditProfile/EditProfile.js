@@ -6,7 +6,6 @@ const EditProfile = ({ setUserInfo, setEditProfile, user, setUser }) => {
   const [newUserInfo, setNewUserInfo] = useState({ name: '' })
 
   async function saveProfile() {
-console.log(newUserInfo.name,user.data.name)
     if (newUserInfo.name == "") {
       alert("Name Is Required!!")
     }
@@ -21,7 +20,6 @@ console.log(newUserInfo.name,user.data.name)
         setUserInfo(res?.data.data)
         window.sessionStorage.clear()
         window.sessionStorage.setItem("user", JSON.stringify({data:res?.data.data}));
-        console.log(res.data)
 
         // setUser(res?.data)
       }

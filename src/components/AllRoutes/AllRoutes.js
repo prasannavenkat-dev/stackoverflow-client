@@ -34,8 +34,6 @@ function questionHandler(event){
     return newVal;
   })
 
-  console.log(questionInfo)
-
 }
 
 
@@ -49,8 +47,6 @@ useEffect(() => {
     else{
 
     }
-    console.log(res)
-
   }
 fetchData()      
 }, [])

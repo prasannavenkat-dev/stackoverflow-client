@@ -9,7 +9,6 @@ const SignInCard = ({ navigate, dispatch }) => {
       return { ...prev, [event.target.name]: event.target.value }
     })
 
-    console.log(signInData)
   }
 
   function signInSubmit() {
