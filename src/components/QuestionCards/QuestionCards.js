@@ -1,11 +1,12 @@
 import React from 'react';
 import './QuestionCards.css';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 const QuestionCards = ({ question }) => {
   const navigate = useNavigate()
   const location = useLocation();
-  const { _id, upVotes, downVotes, noOfAnswers, questionTitle, questionBody, questionTags, userPosted, askedOn, answers } = question;
+  const { _id, upVotes, downVotes, noOfAnswers, questionTitle, questionBody, questionTags, userPosted, askedOn, answers,userId } = question;
+  console.log(userId)
 
   return (
     <div className="question-container">
@@ -36,12 +37,14 @@ const QuestionCards = ({ question }) => {
             </div>
 
             <div className="author-container">
+            <Link style={{textDecoration:"none"}} to={`/users/${userId}/${userPosted?.split(" ").join("-")}`}>
               <button className="link-button">
+              
                 <span className="link-text">
                   {userPosted}
                 </span>
               </button>
-
+</Link>
               <span>  asked</span>
               <span>{askedOn}</span>
             </div>

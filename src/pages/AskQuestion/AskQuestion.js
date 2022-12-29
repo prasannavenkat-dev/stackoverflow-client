@@ -66,21 +66,19 @@ const AskQuestion = ({ setBgColor, questionInfo, questionHandler, setQuestionInf
     let _id = Math.floor(Math.random() * 999999);
 
     let {questionTitle,questionBody,questionTags } = questionInfo;
-
-  
+    let userPosted = user?.data?.name 
+    let userId = user?.data?.userId
 
     if(!questionTitle || !questionBody || questionTags.length==0 ){
         alert("Missing Input Fields")
         return;
     }
-
-
+    
     setQuestionInfo(prev => {
-      return { ...prev, askedOn,_id }
+      return { ...prev, askedOn,_id,userPosted,userId }
     })
 
-
-    dispatch(postQuestion({...questionInfo,askedOn,_id}));
+    dispatch(postQuestion({...questionInfo,askedOn,_id,userPosted,userId}));
 
     clearFields();
   }

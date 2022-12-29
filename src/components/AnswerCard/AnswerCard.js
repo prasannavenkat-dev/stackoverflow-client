@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const AnswerCard = ({answer}) => {
 
 
     const {answerBody,answeredBy,answeredOn,userId} = answer;
+
   return (
   
     <div className='answer-body-layout'>
@@ -20,11 +22,14 @@ const AnswerCard = ({answer}) => {
             Share
         </button>
         <div className="author-container">
+        <Link style={{textDecoration:"none"}} to={`/users/${userId}/${answeredBy?.split(" ").join("-")}`}>
+
             <button className="link-button">
                 <span className="link-text" >
                     {answeredBy}
                 </span>
             </button>
+            </Link>
             {/* <span className="score">1222</span> */}
             <span>  answered</span>
             <span>{answeredOn}</span>
