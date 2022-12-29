@@ -1,0 +1,52 @@
+.tag-page-container{
+    margin-left: 164px;
+    padding: 24px;
+  
+    padding-top: 0;
+
+}
+
+.tag-header h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: #232629;
+
+}
+
+
+
+
+
+.tag-header{
+    margin-bottom: 16px;
+}
+
+
+.tag-description{
+    font-size: 15px;
+    color: #232629;
+    margin-bottom: 16px;
+    max-width:calc(97.2307692rem / 2) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:640px) {
+ 
+    .tag-page-container{
+        margin-left: 0 ;
+    }
+
+
+    .tag-header h1{
+        font-size: 22px ;
+    }
+}

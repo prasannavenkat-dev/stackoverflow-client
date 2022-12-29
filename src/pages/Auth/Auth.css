@@ -1,0 +1,70 @@
+.form-container .form {
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 24px hsla(0, 0%, 0%, 0.05), 0 20px 48px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.1);
+  border-radius: 7px;
+  margin-bottom: 24px;
+  width: 350px;
+}
+
+.checkbox-label {
+  font-size: 12px;
+}
+
+.input-container {
+  margin: 8px 0;
+  color: #0c0d0e;
+}
+
+.logo2 {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.headline {
+  margin-bottom: 32px;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 380px;
+  padding: 24px;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+.sub-text {
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.helper-text {
+  color: #6a737c;
+  font-size: 13px;
+}
+
+.signUp-description{
+  display: flex;
+   flex-direction: column;
+    color: #232629;
+     margin: 0 48px 0px 0
+}
+
+@media screen and (max-width:817px) {
+  .signUp-description{
+display: none;
+  }
+}

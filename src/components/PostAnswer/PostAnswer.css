@@ -1,0 +1,142 @@
+.post-answer-container{
+        margin-left: 186px;
+        /* min-height: calc(100vh - 50px); */
+        height: auto;
+        /* width: 100%; */
+
+}
+
+.que-title h1{
+    margin: 0 0 8px 0;
+    font-size: 27px;
+    font-weight: 500;
+    color: hsl(210deg 8% 25%);
+}
+
+.time-block{
+    font-size:12px;
+    color: #6A737C;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid hsl(210deg 8% 90%);
+}
+
+.question-body-container{
+    display: flex;
+
+}
+
+.vote-container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+}
+
+
+.vote-btn{
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    margin: 2px;
+    background: none;
+    border:0;
+    cursor: pointer;
+}
+
+.vote-icon{
+   
+    filter: invert(80%) sepia(13%) saturate(102%) hue-rotate(169deg) brightness(93%) contrast(95%);
+}
+
+.vote-count{
+    color: hsl(210deg 8% 45%);
+    font-size: 21px;
+    margin: 2px;
+    text-align: center;
+}
+
+.question-body-post-answer{
+    margin-bottom: 16.5px;
+    font-size: 15px;
+    color: #232629;
+}
+
+.utility{
+    display: flex;
+    justify-content: space-between;
+    margin:16px 0;
+    padding-top: 4px;
+}
+
+.share-btn{
+    font-size: 13px;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: #6A737C;
+    margin: 4px;
+}
+
+.answer-count{
+    font-size: 19px;
+    color: #232629;
+    margin: 0;
+    font-weight: 400;
+}
+
+.answer-count-container{
+    margin-bottom: 8px;
+
+}
+
+.answer-container > div{
+    padding: 16px 0 0 0;
+    border-bottom: 1px solid hsl(180deg 8% 93%);
+}
+
+.answer-container :last-child{
+    border-bottom: none;
+}
+
+.post-answer{
+    padding: 10px 0 15px 0;
+}
+
+.your-answer-container{
+    border-top: 1px solid hsl(210deg 8% 90%);
+
+}
+
+.your-answer-header h2{
+    font-weight: 400;
+    color: #232629;
+    font-size: 19px;
+}
+
+
+.ask-own-question{
+    font-size: 17px;
+    color: #232629;
+    padding-right: 10px;
+    padding: 15px 10px 30px 0;
+}
+
+.ask-own-question .link-text{
+    font-size: 17px;
+}
+
+@media screen and (max-width:640px) {
+
+    .que-title h1{
+        font-size: 22.846px;
+    }
+    .post-answer-container{
+     padding: 0 16px 24px 16px;
+     margin-left: 0;
+    }
+
+    .ask-own-question,.ask-own-question .link-text,.ask-own-question .tag{
+        font-size: 14.386px !important;
+    }
+    
+}

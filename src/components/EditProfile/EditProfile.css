@@ -1,0 +1,56 @@
+.edit-header h1{
+    font-size: 25px;
+    color:hsl(210deg 8% 5%);
+    font-weight: normal;
+    line-height: calc((13+2) / 5);
+
+    padding: 0;
+    margin: 0;
+}
+
+.edit-header{
+    margin: 0 0 24px;
+    border-bottom: 1px solid hsl(210deg 8% 85%);
+
+}
+
+
+.sub-header{
+    font-size: 20px;
+    color:#232629;
+    margin-bottom: 8px;
+}
+
+
+.input-edit-container{
+    padding: 24px;
+    border: 1px solid hsl(210deg 8% 90%);
+    margin-bottom: 48px;
+}
+
+.edit-footer button{
+    margin: 4px 6px;
+}
+
+.cancel-btn{
+    background: none;
+    border: 0;
+    color: hsl(206deg 100% 40%);
+}
+
+.cancel-btn:hover{
+    background-color: hsl(206deg 100% 97%);
+    color: hsl(209deg 100% 38%);
+
+}
+
+
+@media screen and (max-width:640px){
+    .edit-footer{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+  
+}

@@ -1,0 +1,167 @@
+.top-navbar {
+height: 47px;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #f8f8f9;
+  border-top: 3px solid #ef8236;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 1px 2px hsla(0,0%,0%,0.05), 0 1px 4px hsla(0,0%,0%,0.05),0 2px 8px hsla(0,0%,0%,0.05);
+  z-index: 5;
+}
+
+.nav-logo {
+  padding: 0 8px;
+}
+
+.logo1 {
+  width: 146px;
+}
+
+.navbar {
+  height: 100%;
+  width: 83%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-btn {
+  cursor: pointer;
+  border-radius: 1000px;
+  padding: 6px 12px;
+}
+
+.nav-item:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.navbar form {
+  flex-grow: 1;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  filter: invert(58%) sepia(9%) saturate(383%) hue-rotate(169deg) brightness(93%) contrast(92%);
+}
+
+.navbar form input {
+  width: 100%;
+  margin: 0;
+  padding: 8px 10px 8px 32px;
+  border: 1px solid #0000003e;
+  border-radius: 3px;
+}
+
+.nav-item {
+  margin: 0 3px;
+  font-size: 12px;
+  /* font-weight: 500; */
+  text-decoration: none;
+  color: rgb(69, 69, 69);
+  transition: 0.9s;
+}
+
+.nav-link {
+  padding: 7px 13px;
+  border: 1px solid blue;
+  border-radius: 3px;
+  background-color: #e7f8fe;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #d3e4eb;
+}
+
+.logo1{
+  display: block;
+}
+
+.logo2{
+  display: none;
+  width:25px;
+  height: 30px;
+}
+
+.nav-search-field{
+  display: block;
+}
+.nav-search-field-bottom{
+  display: none;
+}
+
+.nav-search-btn-small{
+padding:7px;
+display: none;
+border: 0;
+background-color: #f8f9f9;
+margin-left: auto;
+margin-right: 8px;
+
+}
+
+.nav-search-btn-small img{
+  filter: invert(40%) sepia(13%) saturate(298%) hue-rotate(172deg) brightness(90%) contrast(86%);/* filter: invert(14%) sepia(5%) saturate(1009%) hue-rotate(169deg) brightness(90%) contrast(95%);  */
+}
+.nav-search-btn-small:hover{
+  outline: none;
+}
+@media screen and (max-width:980px) {
+  .navbar{
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .btn{
+    margin-right: 8px;
+  }
+}
+
+
+@media screen and (max-width:640px) {
+  .logo1{
+    display: none;
+  }
+  .logo2{
+    display: block;
+    width:38px;
+    height: 40px;
+  }
+
+  .nav-btn{
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .nav-search-field{
+    display: none;
+  }
+  .nav-search-field-bottom{
+    display: block;
+  }
+
+  .nav-search-btn-small{
+    display: block;
+    
+    }
+
+ 
+}
+
+
+@media screen and (min-width:641px) {
+
+  .nav-search-field-bottom{
+    display: none;
+  }
+  
+}

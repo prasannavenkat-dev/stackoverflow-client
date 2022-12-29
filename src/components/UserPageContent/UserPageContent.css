@@ -1,0 +1,31 @@
+.user-page-container{
+    padding:24px;
+    margin-left: 164px;
+    padding-top: 0;
+
+}
+
+.user-header h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: #232629;
+}
+
+.user-header{
+    margin-bottom: 24px;
+}
+
+
+@media screen and (max-width:640px) {
+    
+
+    .user-header h1{
+        font-size: 22px;
+       
+    }
+    .user-page-container{
+        margin-left: 0;
+    
+    }
+
+}
