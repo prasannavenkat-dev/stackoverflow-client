@@ -262,6 +262,8 @@ li {
   margin-left: 164px;
   height: calc(100vh - 50px);
   padding-left: 24px;
+  padding-right: 24px;
+
   padding-top: 0;
   padding-bottom: 0;
 }
