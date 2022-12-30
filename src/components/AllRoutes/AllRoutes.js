@@ -36,19 +36,19 @@ const AllRoutes = ({ setBgColor, user, setUser }) => {
     })
 
   }
-
+  async function fetchData() {
+    let res = await axios.get("https://stackoverflow-server-16ku.onrender.com/getAllQuestions");
+    if (res.status == 200) {
+      setQuestionList(res.data.data)
+    }
+    else {
+      alert(res?.data?.message || "Error Fetching Question")
+    }
+  }
 
   useEffect(() => {
 
-    async function fetchData() {
-      let res = await axios.get("https://stackoverflow-server-16ku.onrender.com/getAllQuestions");
-      if (res.status == 200) {
-        setQuestionList(res.data.data)
-      }
-      else {
-        alert(res?.data?.message || "Error Fetching Question")
-      }
-    }
+
     fetchData()
   }, [])
 
@@ -65,9 +65,9 @@ const AllRoutes = ({ setBgColor, user, setUser }) => {
 
   return (
     <Routes>
-      <Route exact path="/" element={<Home setBgColor={setBgColor} user={user} questionList={questionList} />} />
-      <Route exact path="/Auth" element={<Auth setBgColor={setBgColor} user={user} getCurrentDateAndTime={getCurrentDateAndTime} />} />
-      <Route exact path="/questions" element={<Home setBgColor={setBgColor} questionList={questionList} />} />
+      <Route exact path="/" element={<Home setBgColor={setBgColor} user={user} questionList={questionList} fetchData={fetchData}/>} />
+      <Route exact path="/Auth" element={<Auth setBgColor={setBgColor} user={user} getCurrentDateAndTime={getCurrentDateAndTime}  />} />
+      <Route exact path="/questions" element={<Home setBgColor={setBgColor} questionList={questionList} fetchData={fetchData}/>} />
       <Route exact path="/questions/ask" element={<AskQuestion getCurrentDateAndTime={getCurrentDateAndTime} user={user} setBgColor={setBgColor} questionInfo={questionInfo} questionHandler={questionHandler} setQuestionInfo={setQuestionInfo} />} />
       <Route exact path="/questions/:id" element={<QuestionDetails user={user} setBgColor={setBgColor} questionList={questionList} getCurrentDateAndTime={getCurrentDateAndTime} />} />
       <Route exact path="/tags" element={<TagPage setBgColor={setBgColor} />} />

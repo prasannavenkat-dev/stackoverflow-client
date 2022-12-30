@@ -7,14 +7,17 @@ import { useDispatch } from 'react-redux';
 import { fetchQuestion } from '../../actions/fetchQuestion';
 import axios from 'axios';
 
-const Content = ({questionList}) => {
+const Content = ({questionList,fetchData}) => {
 
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
 
 
+useEffect(()=>{
+fetchData();
 
+},[])
 
   
   
