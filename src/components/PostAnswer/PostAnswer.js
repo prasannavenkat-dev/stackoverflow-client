@@ -5,6 +5,7 @@ import votedown from "../../assets/votedown.svg"
 import AnswerCard from '../AnswerCard/AnswerCard'
 import axios from "axios"
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
+import { Skeleton } from '@mui/material'
 const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
 
     const [selectedQuestion, setSelectedQuestion] = useState();
@@ -227,8 +228,11 @@ const PostAnswer = ({ user, questionList, getCurrentDateAndTime }) => {
                         </div>
                     </div> :
                     <div className='default'>
-
-                    </div>
+    {!selectedQuestion && 
+      <Skeleton variant="rectangular" width={"100%"} height={"100%"} sx={{borderRadius:"3px",background:"hsl(210deg 8% 95%)"}} />
+        
+        }
+    </div>
             }
         </>
     )
