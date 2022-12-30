@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { fetchQuestion } from '../../actions/fetchQuestion';
 import axios from 'axios';
+import { Skeleton } from '@mui/material';
 
 const Content = ({questionList,fetchData}) => {
 
@@ -63,12 +64,8 @@ fetchData();
 
     :
     <div className='default'>
-    {questionList.length==0 &&  <div style={{display:"flex",justifyContent:"space-between"}}>
-    No Questions Found
-    <button className="btn" style={{ marginTop: 0, marginBottom: '12px' }} onClick={()=>navigate("/questions/ask")}>
-          Ask Question
-        </button>
-        </div>
+    {(questionList.length==0) && 
+      <Skeleton variant="rectangular" width={"100%"} height={"100%"} sx={{borderRadius:"3px",background:"hsl(210deg 8% 95%)"}} />
         
         }
     </div>

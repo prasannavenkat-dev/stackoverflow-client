@@ -48,7 +48,6 @@ const AllRoutes = ({ setBgColor, user, setUser }) => {
 
   useEffect(() => {
 
-
     fetchData()
   }, [])
 

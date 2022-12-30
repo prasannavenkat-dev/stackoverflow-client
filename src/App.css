@@ -261,7 +261,9 @@ li {
   width: 100%;
   margin-left: 164px;
   height: calc(100vh - 50px);
-  padding: 24px;
+  padding-left: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .grid-container,.user-grid-container{
