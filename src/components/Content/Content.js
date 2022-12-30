@@ -26,7 +26,7 @@ fetchData();
  
 
   return <>
-{questionList.length ?
+{questionList.length==0 ?
     <div className="content-container">
       <div className="header">
        
@@ -64,7 +64,7 @@ fetchData();
 
     :
     <div className='default'>
-    {(questionList.length==0) && 
+    {!(questionList.length==0) && 
       <Skeleton variant="rectangular" width={"100%"} height={"100%"} sx={{borderRadius:"3px",background:"hsl(210deg 8% 95%)"}} />
         
         }
